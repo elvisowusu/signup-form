@@ -12,6 +12,9 @@ export default {
         'darkBlue':'hsl(249, 10%, 26%)', 
         'greenish':'hsl(154, 59%, 51%)',
         'grayishBlue': 'hsl(246, 25%, 77%)',
+      },
+      fontFamily:{
+        poppins : ['Poppins', 'sans-serif'],
       }
     },
   },
