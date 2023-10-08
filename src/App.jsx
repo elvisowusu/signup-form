@@ -1,11 +1,23 @@
-import { useState } from 'react'
-import destopBg from "./assets/bg-intro-desktop.png"
+import { useState,useEffect } from 'react'
+import desktopBg from "./assets/bg-intro-desktop.png"
 import mobileBg from "./assets/bg-intro-mobile.png"
 import './App.css'
 
 function App() {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth)
-  
+  useEffect(() => {
+    const handleResize = () => {
+      setScreenWidth(window.innerWidth);
+    };
+
+    // Add event listener for window resize
+    window.addEventListener('resize', handleResize);
+
+    // Remove event listener when the component is unmounted
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []); // Empty dependency array ensures that the effect runs once when the component mounts
 
   return (
     <div className={`font-poppins flex flex-col justify-center items-center  h-[121vh] ${screenWidth <= 640? "bg-[url(./assets/bg-intro-mobile.png)]":"bg-[url(./assets/bg-intro-desktop.png)]"} bg-red-300 bg-cover overflow-scroll sm:h-[100vh] sm:flex-row`}>
