@@ -25,40 +25,40 @@ function App() {
           <h1 className='text-[1.5rem] px-2 mb-[1.2rem] leading-[2rem]'>Learn to code by watching others</h1>
           <p className='opacity-80'>See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how developers think is invaluable.</p>
         </div>
-        <div className="flex flex-col justify-center items-center bg-red-300 px-4 h-[27rem] -mt-2">
-          <div className='bg-blue text-center text-white px-[3rem] py-3 w-[17.3rem] mb-6 text-sm rounded-md md:w-2'>
+        <div className="flex flex-col justify-center items-center px-4 h-[27rem] -mt-2 md:-mt-6 ">
+          <div className='bg-blue text-center text-white px-[3rem] py-3 w-[17.3rem] mb-6 text-sm rounded-md md:w-[20rem] lg:w-[22rem]'>
             Try it free 7 days <span className='text-grayishBlue'>then $20/mo. thereafter</span>
           </div>
-          <div className='bg-white py-5 w-[17.3rem] rounded-lg'>
+          <div className='bg-white py-5 w-[17.3rem] rounded-lg md:w-[20rem] px-4'>
           <form 
               className='flex flex-col justify-center items-center '
             >
             <input
-              className='px-[1rem] py-[0.4rem] border-y-2 border-x-2 w-[15rem] mb-3 rounded-md'
+              className='px-[1rem] py-[0.4rem] border-y-2 border-x-2 w-full mb-3 rounded-md'
               placeholder="First Name" 
               name="firstName"
               type="text" 
             />
             <input 
-              className='px-[1rem] py-[0.4rem] border-y-2 border-x-2 w-[15rem] mb-3 rounded-md'
+              className='px-[1rem] py-[0.4rem] border-y-2 border-x-2 w-full mb-3 rounded-md'
               placeholder="Last Name" 
               name="lastName"
               type="text"
             />
             <input 
-              className='inputs px-[1rem] py-[0.4rem] border-y-2 border-x-2 w-[15rem] mb-3 rounded-md'
+              className='inputs px-[1rem] py-[0.4rem] border-y-2 border-x-2 w-full mb-3 rounded-md'
               placeholder="Email Address" 
               name="email"
               type="email" 
             />
             <input 
-              className='px-[1rem] py-[0.4rem] border-y-2 border-x-2 w-[15rem] mb-3 rounded-md'
+              className='px-[1rem] py-[0.4rem] border-y-2 border-x-2 w-full mb-3 rounded-md'
               placeholder="Password"
               name="password"
               type="password" 
             />
             <button 
-              className='bg-greenish text-white w-[15rem] py-3 text-sm'>
+              className='bg-greenish text-white w-full py-3 text-sm rounded-md'>
               CLAIM YOUR FREE TRIAL
             </button>
           </form>
