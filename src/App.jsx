@@ -64,50 +64,50 @@ function App() {
 
   return (
     <div className={`font-poppins flex flex-col justify-center items-center  h-[121vh] ${screenWidth <= 640? "bg-[url(./assets/bg-intro-mobile.png)]":"bg-[url(./assets/bg-intro-desktop.png)]"} bg-red-300 bg-cover overflow-cover sm:h-[100vh] sm:flex-row md:gap-[4rem]`}>
-        <div className='text-white w-[17.6rem] text-sm text-center mb-[3.5rem] mt-[2.4rem] sm:text-left'>
-          <h1 className='text-[1.5rem] px-2 mb-[1.2rem] leading-[2rem] sm:text-[1.6rem]'>Learn to code by watching others</h1>
-          <p className='opacity-80'>See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how developers think is invaluable.</p>
+        <div className='text-white w-[17.6rem] sm:w-[18rem] md:w-[20rem] lg:w-[25rem] xl:w-[33rem] text-sm text-center mb-[3.5rem] mt-[2.4rem] sm:text-left md:text-[1rem] md:leading-6'>
+          <h1 className='text-[1.5rem] px-2 mb-[1.2rem] leading-[2rem] md:leading-[2.2rem] lg:leading-[2.4rem] xl:leading-[3rem] sm:text-[1.7rem] md:text-[1.9rem] lg:text-[2.1rem] xl:text-[3.1rem] xl:mb-6'>Learn to code by watching others</h1>
+          <p className='opacity-80 ml-2'>See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how developers think is invaluable.</p>
         </div>
         <div className="flex flex-col justify-center items-center px-4 h-[27rem] -mt-2 md:-mt-6 ">
-          <div className='bg-blue text-center text-white px-[3rem] py-3 w-[17.3rem] mb-6 text-sm rounded-md md:w-[22rem]  lg:w-[2rem]'>
+          <div className='bg-blue text-center text-white px-[3rem] py-3 xl:py-5 w-[17.3rem] mb-6 text-sm rounded-md md:w-[22rem] md:text-[1rem]  lg:w-[25rem] xl:w-[31rem]'>
             Try it free 7 days <span className='text-grayishBlue'>then $20/mo. thereafter</span>
           </div>
-          <div className='bg-white py-5 w-[17.3rem] rounded-lg md:w-[22rem] px-4'>
+          <div className='bg-white py-5 xl:py-9 w-[17.3rem] px-4 xl:px-9 rounded-lg md:w-[22rem] lg:w-[25rem] xl:w-[31rem]'>
           <form 
               onSubmit={handleSubmit(onSubmit)}
               className='font-sans flex flex-col justify-center items-center '
             >
             <input
-              className='border focus:outline-none focus:border-blue placeholder:text-black placeholder:font-bold px-[1rem] py-[0.6rem] border-y-2 border-x-2 w-full rounded-md '
+              className='border focus:outline-none focus:border-blue placeholder:text-black placeholder:font-bold px-[1rem] lg:px-[1.5rem] xl:px-[1.7rem] py-[0.6rem] lg:py-[0.9rem] border-y-2 border-x-2 w-full rounded-md '
               placeholder="First Name" 
               type="text" 
               {...register("firstName")}
             />
-            <p className='text-[0.7rem] text-reddish ml-[6rem] italic' >{errors.firstName?.message}</p>
+            <p className='text-[0.7rem] font-bold text-reddish ml-[6rem] sm:ml-[5.5rem] md:ml-[10rem] lg:ml-[12.6rem] italic' >{errors.firstName?.message}</p>
             <input 
-              className='border focus:outline-none focus:border-blue placeholder:text-black placeholder:font-bold px-[1rem] py-[0.6rem] border-y-2 border-x-2 w-full mt-3 rounded-md md:py-[0.8rem]'
+              className='border focus:outline-none focus:border-blue placeholder:text-black placeholder:font-bold px-[1rem] lg:px-[1.5rem] xl:px-[1.7rem] py-[0.6rem] lg:py-[0.9rem] border-y-2 border-x-2 w-full mt-3 md:mt-4 rounded-md'
               placeholder="Last Name"
               type="text"
               {...register("lastName")}
             />
-            <p className='text-[0.7rem] text-reddish ml-[6rem] italic'>{errors.lastName?.message}</p>
+            <p className='text-[0.7rem] font-bold text-reddish ml-[6rem] sm:ml-[5.5rem] md:ml-[10rem] lg:ml-[12.6rem] italic'>{errors.lastName?.message}</p>
             <input 
-              className='border focus:outline-none focus:border-blue placeholder:text-black placeholder:font-bold inputs px-[1rem] py-[0.6rem] border-y-2 border-x-2 w-full mt-3 rounded-md'
+              className='border focus:outline-none focus:border-blue placeholder:text-black placeholder:font-bold inputs px-[1rem] lg:px-[1.5rem] xl:px-[1.7rem] py-[0.6rem] lg:py-[0.9rem] border-y-2 border-x-2 w-full mt-3 md:mt-4 rounded-md'
               placeholder="Email Address" 
               type="email"
               {...register("email")}
             />
-            <p className='text-[0.7rem] text-reddish ml-[5.5rem] italic'>{errors.email?.message}</p>
+            <p className='text-[0.7rem] font-bold text-reddish ml-[5.5rem] sm:ml-[5rem] md:ml-[9.4rem] lg:ml-[12.1rem] italic'>{errors.email?.message}</p>
             <input 
-              className='border focus:outline-none focus:border-blue placeholder:text-black placeholder:font-bold px-[1rem] py-[0.6rem] border-y-2 border-x-2 w-full mt-3 rounded-md'
+              className='border focus:outline-none focus:border-blue placeholder:text-black placeholder:font-bold px-[1rem] lg:px-[1.5rem] xl:px-[1.7rem] py-[0.6rem] lg:py-[0.9rem]  border-y-2 border-x-2 w-full mt-3 md:mt-4 rounded-md'
               placeholder="Password"
               type="password"
               {...register("password")}
             />
-            <p className='text-[0.7rem] text-reddish ml-[6.5rem] italic'>{errors.password?.message}</p>
+            <p className='text-[0.7rem] font-bold text-reddish ml-[6.5rem] sm:ml-[5.5rem] md:ml-[10.4rem] lg:ml-[13rem] italic'>{errors.password?.message}</p>
             <input
               type='submit'
-              className='font-poppins bg-greenish text-white w-full py-3 text-sm mt-2 rounded-md'
+              className='font-poppins bg-greenish text-white w-full py-3 md:py-4 text-sm mt-2 md:mt-4 rounded-md'
               value="CLAIM YOUR FREE TRIAL" 
             />
           </form>
