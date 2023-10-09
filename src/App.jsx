@@ -9,15 +9,15 @@ function App() {
 
   const schema = yup.object().shape({
     firstName: yup
-    .string()
-    .required(),
+        .string()
+        .required("First Name cannot be empty"),
     lastName: yup
-    .string()
-        .required(),
+        .string()
+        .required("Last Name cannot be empty"),
         email: yup
         .string()
         .email()
-        .required(),
+        .required("Looks like this is not an email"),
         // fornumbers: yup
         //     .number()
         //     .positive()
@@ -25,9 +25,9 @@ function App() {
         //     .min(18)
         //     .max()
         //     .required(),
-        password: yup
+    password: yup
         .string()
-        .required()
+        .required("Password cannot be empty")
         .min(6)
         .max(15),
         // confirmPassword: yup
@@ -83,28 +83,28 @@ function App() {
               type="text" 
               {...register("firstName")}
             />
-            <p className='text-sm text-reddish' >{errors.firstName?.message}</p>
+            <p className='text-[0.7rem] text-reddish ml-[6rem] italic' >{errors.firstName?.message}</p>
             <input 
               className='border focus:outline-none focus:border-blue placeholder:text-black placeholder:font-bold px-[1rem] py-[0.6rem] border-y-2 border-x-2 w-full mt-3 rounded-md md:py-[0.8rem]'
               placeholder="Last Name"
               type="text"
               {...register("lastName")}
             />
-            <p className='text-sm text-reddish'>{errors.lastName?.message}</p>
+            <p className='text-[0.7rem] text-reddish ml-[6rem] italic'>{errors.lastName?.message}</p>
             <input 
               className='border focus:outline-none focus:border-blue placeholder:text-black placeholder:font-bold inputs px-[1rem] py-[0.6rem] border-y-2 border-x-2 w-full mt-3 rounded-md'
               placeholder="Email Address" 
               type="email"
               {...register("email")}
             />
-            <p className='text-sm text-reddish'>{errors.email?.message}</p>
+            <p className='text-[0.7rem] text-reddish ml-[5.5rem] italic'>{errors.email?.message}</p>
             <input 
               className='border focus:outline-none focus:border-blue placeholder:text-black placeholder:font-bold px-[1rem] py-[0.6rem] border-y-2 border-x-2 w-full mt-3 rounded-md'
               placeholder="Password"
               type="password"
               {...register("password")}
             />
-            <p className='text-sm text-reddish'>{errors.password?.message}</p>
+            <p className='text-[0.7rem] text-reddish ml-[6.5rem] italic'>{errors.password?.message}</p>
             <input
               type='submit'
               className='font-poppins bg-greenish text-white w-full py-3 text-sm mt-2 rounded-md'
