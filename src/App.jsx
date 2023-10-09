@@ -1,8 +1,6 @@
 import { useState,useEffect } from 'react'
 import {useForm} from "react-hook-form"
 import * as yup from 'yup'
-import desktopBg from "./assets/bg-intro-desktop.png"
-import mobileBg from "./assets/bg-intro-mobile.png"
 import './App.css'
 
 function App() {
@@ -12,6 +10,7 @@ function App() {
   const onSubmit =(data)=>{
     console.log(data)
   }
+  
 
   useEffect(() => {
     const handleResize = () => {
@@ -45,30 +44,30 @@ function App() {
             <input
               className='border focus:outline-none focus:border-blue placeholder:text-black placeholder:font-bold px-[1rem] py-[0.6rem] border-y-2 border-x-2 w-full mb-3 rounded-md '
               placeholder="First Name" 
-              name="firstName"
               type="text" 
-              {...register}
+              required
+              {...register("firstName")}
             />
             <input 
               className='border focus:outline-none focus:border-blue placeholder:text-black placeholder:font-bold px-[1rem] py-[0.6rem] border-y-2 border-x-2 w-full mb-3 rounded-md md:py-[0.8rem]'
-              placeholder="Last Name" 
-              name="lastName"
+              placeholder="Last Name"
               type="text"
               required
+              {...register("lastName")}
             />
             <input 
               className='border focus:outline-none focus:border-blue placeholder:text-black placeholder:font-bold inputs px-[1rem] py-[0.6rem] border-y-2 border-x-2 w-full mb-3 rounded-md'
               placeholder="Email Address" 
-              name="email"
               type="email" 
               required
+              {...register("email")}
             />
             <input 
               className='border focus:outline-none focus:border-blue placeholder:text-black placeholder:font-bold px-[1rem] py-[0.6rem] border-y-2 border-x-2 w-full mb-3 rounded-md'
               placeholder="Password"
-              name="password"
               type="password" 
               required
+              {...register("password")}
             />
             <input
               type='submit'
