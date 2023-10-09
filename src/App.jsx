@@ -10,7 +10,10 @@ function App() {
   const onSubmit =(data)=>{
     console.log(data)
   }
-  
+  const schema = yup.object().shape({
+    firstName: yup.string().required(),
+    lastName: yup.string().required(),
+  })
 
   useEffect(() => {
     const handleResize = () => {
@@ -45,7 +48,6 @@ function App() {
               className='border focus:outline-none focus:border-blue placeholder:text-black placeholder:font-bold px-[1rem] py-[0.6rem] border-y-2 border-x-2 w-full mb-3 rounded-md '
               placeholder="First Name" 
               type="text" 
-              required
               {...register("firstName")}
             />
             <input 
