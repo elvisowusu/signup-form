@@ -20,27 +20,27 @@ function App() {
   }, []); // Empty dependency array ensures that the effect runs once when the component mounts
 
   return (
-    <div className={`font-poppins flex flex-col justify-center items-center  h-[121vh] ${screenWidth <= 640? "bg-[url(./assets/bg-intro-mobile.png)]":"bg-[url(./assets/bg-intro-desktop.png)]"} bg-red-300 bg-cover overflow-scroll sm:h-[100vh] sm:flex-row`}>
-        <div className='text-white w-[17.6rem] text-sm text-center mb-[3.5rem] mt-[2.4rem]'>
-          <h1 className='text-[1.5rem] px-2 mb-[1.2rem] leading-[2rem]'>Learn to code by watching others</h1>
+    <div className={`font-poppins flex flex-col justify-center items-center  h-[121vh] ${screenWidth <= 640? "bg-[url(./assets/bg-intro-mobile.png)]":"bg-[url(./assets/bg-intro-desktop.png)]"} bg-red-300 bg-cover overflow-scroll sm:h-[100vh] sm:flex-row md:gap-[4rem]`}>
+        <div className='text-white w-[17.6rem] text-sm text-center mb-[3.5rem] mt-[2.4rem] sm:text-left'>
+          <h1 className='text-[1.5rem] px-2 mb-[1.2rem] leading-[2rem] sm:text-[1.6rem]'>Learn to code by watching others</h1>
           <p className='opacity-80'>See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how developers think is invaluable.</p>
         </div>
         <div className="flex flex-col justify-center items-center px-4 h-[27rem] -mt-2 md:-mt-6 ">
-          <div className='bg-blue text-center text-white px-[3rem] py-3 w-[17.3rem] mb-6 text-sm rounded-md md:w-[20rem] lg:w-[22rem]'>
+          <div className='bg-blue text-center text-white px-[3rem] py-3 w-[17.3rem] mb-6 text-sm rounded-md md:w-[22rem]  lg:w-[2rem]'>
             Try it free 7 days <span className='text-grayishBlue'>then $20/mo. thereafter</span>
           </div>
-          <div className='bg-white py-5 w-[17.3rem] rounded-lg md:w-[20rem] px-4'>
+          <div className='bg-white py-5 w-[17.3rem] rounded-lg md:w-[22rem] px-4'>
           <form 
               className='flex flex-col justify-center items-center '
             >
             <input
-              className='px-[1rem] py-[0.4rem] border-y-2 border-x-2 w-full mb-3 rounded-md'
+              className='px-[1rem] py-[0.4rem] border-y-2 border-x-2 w-full mb-3 rounded-md:'
               placeholder="First Name" 
               name="firstName"
               type="text" 
             />
             <input 
-              className='px-[1rem] py-[0.4rem] border-y-2 border-x-2 w-full mb-3 rounded-md'
+              className='px-[1rem] py-[0.4rem] border-y-2 border-x-2 w-full mb-3 rounded-md md:py-[0.8rem]'
               placeholder="Last Name" 
               name="lastName"
               type="text"
