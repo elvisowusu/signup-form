@@ -5,9 +5,11 @@ import mobileBg from "./assets/bg-intro-mobile.png"
 import './App.css'
 
 function App() {
-  const [screenWidth, setScreenWidth] = useState(window.innerWidth)\
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth)
 
-  
+  const {register, onSubmit, errors} =useForm()
+
+
   useEffect(() => {
     const handleResize = () => {
       setScreenWidth(window.innerWidth);
