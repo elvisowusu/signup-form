@@ -38,7 +38,7 @@ function App() {
   
   const {register, handleSubmit, errors} =useForm({
       //a resolver helps us to specify how our schema will look like 
-      resolver:
+      resolver: yupResolver(schema),
   });
 
   const onSubmit =(data)=>{
