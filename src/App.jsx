@@ -36,7 +36,7 @@ function App() {
     //     .required(),
   })
   
-  const {register, handleSubmit, errors} =useForm({
+  const {register, handleSubmit, formState:{errors}} =useForm({
       //a resolver helps us to specify how our schema will look like 
       resolver: yupResolver(schema),
   });
