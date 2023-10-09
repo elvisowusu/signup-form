@@ -1,10 +1,13 @@
 import { useState,useEffect } from 'react'
+import {useForm} from "react-hook-form"
 import desktopBg from "./assets/bg-intro-desktop.png"
 import mobileBg from "./assets/bg-intro-mobile.png"
 import './App.css'
 
 function App() {
-  const [screenWidth, setScreenWidth] = useState(window.innerWidth)
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth)\
+
+  
   useEffect(() => {
     const handleResize = () => {
       setScreenWidth(window.innerWidth);
