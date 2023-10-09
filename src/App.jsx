@@ -78,21 +78,18 @@ function App() {
               className='border focus:outline-none focus:border-blue placeholder:text-black placeholder:font-bold px-[1rem] py-[0.6rem] border-y-2 border-x-2 w-full mb-3 rounded-md md:py-[0.8rem]'
               placeholder="Last Name"
               type="text"
-              required
               {...register("lastName")}
             />
             <input 
               className='border focus:outline-none focus:border-blue placeholder:text-black placeholder:font-bold inputs px-[1rem] py-[0.6rem] border-y-2 border-x-2 w-full mb-3 rounded-md'
               placeholder="Email Address" 
-              type="email" 
-              required
+              type="email"
               {...register("email")}
             />
             <input 
               className='border focus:outline-none focus:border-blue placeholder:text-black placeholder:font-bold px-[1rem] py-[0.6rem] border-y-2 border-x-2 w-full mb-3 rounded-md'
               placeholder="Password"
-              type="password" 
-              required
+              type="password"
               {...register("password")}
             />
             <input
