@@ -7,8 +7,10 @@ import './App.css'
 function App() {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth)
 
-  const {register, onSubmit, errors} =useForm()
-
+  const {register, handleSubmit, errors} =useForm();
+  const onSubmit =()=>{
+    console.log("Hello word")
+  }
 
   useEffect(() => {
     const handleResize = () => {
@@ -36,6 +38,7 @@ function App() {
           </div>
           <div className='bg-white py-5 w-[17.3rem] rounded-lg md:w-[22rem] px-4'>
           <form 
+              onSubmit={handleSubmit(onSubmit)}
               className='font-sans flex flex-col justify-center items-center '
             >
             <input
@@ -43,7 +46,7 @@ function App() {
               placeholder="First Name" 
               name="firstName"
               type="text" 
-              required
+              ref={register}
             />
             <input 
               className='border focus:outline-none focus:border-blue placeholder:text-black placeholder:font-bold px-[1rem] py-[0.6rem] border-y-2 border-x-2 w-full mb-3 rounded-md md:py-[0.8rem]'
