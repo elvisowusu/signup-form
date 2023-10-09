@@ -46,7 +46,7 @@ function App() {
               placeholder="First Name" 
               name="firstName"
               type="text" 
-              ref={register}
+              // ref={register}
             />
             <input 
               className='border focus:outline-none focus:border-blue placeholder:text-black placeholder:font-bold px-[1rem] py-[0.6rem] border-y-2 border-x-2 w-full mb-3 rounded-md md:py-[0.8rem]'
@@ -69,10 +69,11 @@ function App() {
               type="password" 
               required
             />
-            <button 
-              className='font-poppins bg-greenish text-white w-full py-3 text-sm rounded-md'>
-              CLAIM YOUR FREE TRIAL
-            </button>
+            <input
+              type='submit'
+              className='font-poppins bg-greenish text-white w-full py-3 text-sm rounded-md'
+              value="CLAIM YOUR FREE TRIAL" 
+            />
           </form>
           <p className='text-[0.6rem] px-3 sm:px-8 text-center  mt-3 text-grayishBlue'>By clicking the button,you are agreeing to our <span className='text-reddish'>Terms and Services</span></p>
         
