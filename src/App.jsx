@@ -6,38 +6,45 @@ import './App.css'
 function App() {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth)
 
-  const {register, handleSubmit, errors} =useForm();
-  const onSubmit =(data)=>{
-    console.log(data)
-  }
   const schema = yup.object().shape({
     firstName: yup
-        .string()
-        .required(),
+    .string()
+    .required(),
     lastName: yup
-        .string()
+    .string()
         .required(),
-    email: yup
+        email: yup
         .string()
         .email()
         .required(),
-    // fornumbers: yup
-    //     .number()
-    //     .positive()
-    //     .integer()
-    //     .min(18)
-    //     .max()
-    //     .required(),
-    password: yup
+        // fornumbers: yup
+        //     .number()
+        //     .positive()
+        //     .integer()
+        //     .min(18)
+        //     .max()
+        //     .required(),
+        password: yup
         .string()
         .min(6)
         .max(15)
         .required(),
-    // confirmPassword: yup
-    //     .string()
-    //     .oneOf([yup.ref("password"),null])
+        // confirmPassword: yup
+        //     .string()
+        //     .oneOf([yup.ref("password"),null])
     //     .required(),
   })
+  
+  const {register, handleSubmit, errors} =useForm({
+      
+  });
+
+  const onSubmit =(data)=>{
+    console.log(data)
+  }
+
+
+
 
   useEffect(() => {
     const handleResize = () => {
