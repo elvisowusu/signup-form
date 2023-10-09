@@ -27,9 +27,9 @@ function App() {
         //     .required(),
         password: yup
         .string()
+        .required()
         .min(6)
-        .max(15)
-        .required(),
+        .max(15),
         // confirmPassword: yup
         //     .string()
         //     .oneOf([yup.ref("password"),null])
@@ -83,28 +83,28 @@ function App() {
               type="text" 
               {...register("firstName")}
             />
-            <p className='text-sm' >{errors.firstName?.message}</p>
+            <p className='text-sm text-reddish' >{errors.firstName?.message}</p>
             <input 
               className='border focus:outline-none focus:border-blue placeholder:text-black placeholder:font-bold px-[1rem] py-[0.6rem] border-y-2 border-x-2 w-full mt-3 rounded-md md:py-[0.8rem]'
               placeholder="Last Name"
               type="text"
               {...register("lastName")}
             />
-            <p className='text-sm'>{errors.lastName?.message}</p>
+            <p className='text-sm text-reddish'>{errors.lastName?.message}</p>
             <input 
               className='border focus:outline-none focus:border-blue placeholder:text-black placeholder:font-bold inputs px-[1rem] py-[0.6rem] border-y-2 border-x-2 w-full mt-3 rounded-md'
               placeholder="Email Address" 
               type="email"
               {...register("email")}
             />
-            <p className='text-sm'>{errors.email?.message}</p>
+            <p className='text-sm text-reddish'>{errors.email?.message}</p>
             <input 
               className='border focus:outline-none focus:border-blue placeholder:text-black placeholder:font-bold px-[1rem] py-[0.6rem] border-y-2 border-x-2 w-full mt-3 rounded-md'
               placeholder="Password"
               type="password"
               {...register("password")}
             />
-            <p className='text-sm'>{errors.password?.message}</p>
+            <p className='text-sm text-reddish'>{errors.password?.message}</p>
             <input
               type='submit'
               className='font-poppins bg-greenish text-white w-full py-3 text-sm mt-2 rounded-md'
