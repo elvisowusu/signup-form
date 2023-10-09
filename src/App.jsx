@@ -11,8 +11,32 @@ function App() {
     console.log(data)
   }
   const schema = yup.object().shape({
-    firstName: yup.string().required(),
-    lastName: yup.string().required(),
+    firstName: yup
+        .string()
+        .required(),
+    lastName: yup
+        .string()
+        .required(),
+    email: yup
+        .string()
+        .email()
+        .required(),
+    // fornumbers: yup
+    //     .number()
+    //     .positive()
+    //     .integer()
+    //     .min(18)
+    //     .max()
+    //     .required(),
+    password: yup
+        .string()
+        .min(6)
+        .max(15)
+        .required(),
+    // confirmPassword: yup
+    //     .string()
+    //     .oneOf([yup.ref("password"),null])
+    //     .required(),
   })
 
   useEffect(() => {
