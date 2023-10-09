@@ -1,5 +1,6 @@
 import { useState,useEffect } from 'react'
 import {useForm} from "react-hook-form"
+import * as yup from 'yup'
 import desktopBg from "./assets/bg-intro-desktop.png"
 import mobileBg from "./assets/bg-intro-mobile.png"
 import './App.css'
@@ -8,8 +9,8 @@ function App() {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth)
 
   const {register, handleSubmit, errors} =useForm();
-  const onSubmit =()=>{
-    console.log("Hello word")
+  const onSubmit =(data)=>{
+    console.log(data)
   }
 
   useEffect(() => {
@@ -46,7 +47,7 @@ function App() {
               placeholder="First Name" 
               name="firstName"
               type="text" 
-              // ref={register}
+              {...register}
             />
             <input 
               className='border focus:outline-none focus:border-blue placeholder:text-black placeholder:font-bold px-[1rem] py-[0.6rem] border-y-2 border-x-2 w-full mb-3 rounded-md md:py-[0.8rem]'
