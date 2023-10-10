@@ -107,7 +107,7 @@ function App() {
             <p className='text-[0.7rem] font-bold text-reddish ml-[6.5rem] sm:ml-[5.5rem] md:ml-[10.4rem] lg:ml-[13rem] italic'>{errors.password?.message}</p>
             <input
               type='submit'
-              className='font-poppins bg-greenish text-white w-full py-3 md:py-4 text-sm mt-2 md:mt-4 rounded-md'
+              className='cursor-pointer font-poppins bg-greenish text-white w-full py-3 md:py-4 text-sm mt-2 md:mt-4 rounded-md'
               value="CLAIM YOUR FREE TRIAL" 
             />
           </form>
