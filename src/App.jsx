@@ -95,7 +95,7 @@ function App() {
             {errors.lastName? <BiSolidErrorCircle className='absolute right-8 xl:right-[3.4rem] bottom-[18.3rem] md:bottom-[19.65rem] lg:bottom-[21.2rem] h-5 md:h-6 w-5 md:w-6 text-reddish' />:""}
             <p className='text-[0.7rem] font-bold text-reddish ml-[6rem] sm:ml-[5.5rem] md:ml-[10rem] lg:ml-[12.6rem] xl:ml-[16.7rem] italic'>{errors.lastName?.message}</p>
             <input 
-              className='border focus:outline-none focus:border-blue placeholder:text-black placeholder:font-bold inputs px-[1rem] lg:px-[1.5rem] xl:px-[1.7rem] py-[0.6rem] lg:py-[0.9rem] border-y-2 border-x-2 w-full mt-3 md:mt-4 rounded-md'
+              className={`border focus:outline-none focus:border-blue ${errors.email?' placeholder-red-600 font-poppins text-sm md:text-lg' :'placeholder:text-black'}  placeholder:font-bold inputs px-[1rem] lg:px-[1.5rem] xl:px-[1.7rem] py-[0.6rem] lg:py-[0.9rem] border-y-2 border-x-2 w-full mt-3 md:mt-4 rounded-md`}
               placeholder={errors.email? "email@example/com": "Email Address"} 
               type="email"
               {...register("email")}
