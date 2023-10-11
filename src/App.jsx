@@ -70,7 +70,7 @@ function App() {
           <p className='opacity-80 ml-2'>See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how developers think is invaluable.</p>
         </div>
         <div className="flex flex-col justify-center items-center px-4 h-[27rem] -mt-2 md:-mt-6 ">
-          <div className='bg-blue text-center text-white px-[3rem] py-3 xl:py-5 w-[17.3rem] mb-6 text-sm rounded-md md:w-[22rem] md:text-[1rem]  lg:w-[25rem] xl:w-[31rem] shadow-lg shadow-gray-700 drop-shadow-lg'>
+          <div className='bg-blue text-center text-white px-[3rem] py-3 xl:py-5 w-[17.3rem] mb-6 text-sm rounded-md md:w-[22rem] md:text-[1rem]  lg:w-[25rem] xl:w-[31rem] shadow-sm shadow-gray-700 drop-shadow-sm'>
             Try it free 7 days <span className='text-grayishBlue'>then $20/mo. thereafter</span>
           </div>
           <div className='bg-white py-5 xl:py-9 w-[17.3rem] px-4 xl:px-9 rounded-lg md:w-[22rem] lg:w-[25rem] xl:w-[31rem] shadow-md shadow-gray-600 drop-shadow-2xl'>
