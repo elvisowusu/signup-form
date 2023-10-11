@@ -76,7 +76,7 @@ function App() {
           <div className='bg-white py-5 xl:py-9 w-[17.3rem] px-4 xl:px-9 rounded-lg md:w-[22rem] lg:w-[25rem] xl:w-[31rem] shadow-md shadow-gray-600 drop-shadow-2xl'>
           <form 
               onSubmit={handleSubmit(onSubmit)}
-              className='font-sans flex flex-col justify-center items-center '
+              className=' flex flex-col justify-center items-center '
             >
             <input
               className={`border ${errors.firstName? 'border-reddish':''} focus:outline-none focus:border-blue placeholder:text-black placeholder:font-bold px-[1rem] lg:px-[1.5rem] xl:px-[1.7rem] py-[0.6rem] lg:py-[0.9rem] border-y-2 border-x-2 w-full rounded-md`}
@@ -85,7 +85,7 @@ function App() {
               {...register("firstName")}
             />
             {errors.firstName? <BiSolidErrorCircle className='absolute right-8 xl:right-[3.4rem] bottom-[22.8rem] md:bottom-[24.6rem] lg:bottom-[26.9rem] h-5 md:h-6 w-5 md:w-6 text-reddish' />:""}
-            <p className='text-[0.7rem] font-bold text-reddish ml-[6rem] sm:ml-[5.5rem] md:ml-[10rem] lg:ml-[12.6rem] xl:ml-[16.7rem] italic' >{errors.firstName?.message}</p>
+            <p className='text-[0.7rem] font-sans font-bold text-reddish ml-[6rem] sm:ml-[5.5rem] md:ml-[10rem] lg:ml-[12.6rem] xl:ml-[16.7rem] italic' >{errors.firstName?.message}</p>
             <input 
               className={`border ${errors.lastName? 'border-reddish':''} focus:outline-none focus:border-blue placeholder:text-black placeholder:font-bold px-[1rem] lg:px-[1.5rem] xl:px-[1.7rem] py-[0.6rem] lg:py-[0.9rem] border-y-2 border-x-2 w-full mt-3 md:mt-4 rounded-md`}
               placeholder={errors.lastName?"":"Last Name"}
@@ -93,7 +93,7 @@ function App() {
               {...register("lastName")}
             />
             {errors.lastName? <BiSolidErrorCircle className='absolute right-8 xl:right-[3.4rem] bottom-[18.1rem] md:bottom-[19.65rem] lg:bottom-[21.4rem] h-5 md:h-6 w-5 md:w-6 text-reddish' />:""}
-            <p className='text-[0.7rem] font-bold text-reddish ml-[6rem] sm:ml-[5.5rem] md:ml-[10rem] lg:ml-[12.6rem] xl:ml-[16.7rem] italic'>{errors.lastName?.message}</p>
+            <p className='text-[0.7rem] font-sans font-bold text-reddish ml-[6rem] sm:ml-[5.5rem] md:ml-[10rem] lg:ml-[12.6rem] xl:ml-[16.7rem] italic'>{errors.lastName?.message}</p>
             <input 
               className={`border focus:outline-none focus:border-blue ${errors.email?' placeholder-red-600 font-poppins text-sm md:text-lg border-reddish' :'placeholder:text-black'}  placeholder:font-bold inputs px-[1rem] lg:px-[1.5rem] xl:px-[1.7rem] py-[0.6rem] lg:py-[0.9rem] border-y-2 border-x-2 w-full mt-3 md:mt-4 rounded-md`}
               placeholder={errors.email? "email@example/com": "Email Address"} 
@@ -101,7 +101,7 @@ function App() {
               {...register("email")}
             />
             {errors.email? <BiSolidErrorCircle className='absolute right-8 xl:right-[3.4rem] bottom-[13.5rem] md:bottom-[14.7rem] lg:bottom-[15.7rem] h-5 md:h-6 w-5 md:w-6 text-reddish' />:""}
-            <p className='text-[0.7rem] font-bold text-reddish ml-[5.5rem] sm:ml-[5rem] md:ml-[9.4rem] lg:ml-[12.1rem] xl:ml-[16rem] italic'>{errors.email?.message}</p>
+            <p className='text-[0.7rem] font-sans font-bold text-reddish ml-[5.5rem] sm:ml-[5rem] md:ml-[9.4rem] lg:ml-[12.1rem] xl:ml-[16rem] italic'>{errors.email?.message}</p>
             <input 
               className={`border ${errors.password? 'border-reddish':''} focus:outline-none focus:border-blue placeholder:text-black placeholder:font-bold px-[1rem] lg:px-[1.5rem] xl:px-[1.7rem] py-[0.6rem] lg:py-[0.9rem]  border-y-2 border-x-2 w-full mt-3 md:mt-4 rounded-md`}
               placeholder={errors.password?"":"Password"}
@@ -109,7 +109,7 @@ function App() {
               {...register("password")}
             />
              {errors.password? <BiSolidErrorCircle className='absolute right-8 xl:right-[3.4rem] bottom-[9rem] md:bottom-[9.8rem] lg:bottom-[10rem] h-5 md:h-6 w-5 md:w-6 text-reddish' />:""}
-            <p className='text-[0.7rem] font-bold text-reddish text-right w-[15rem] md:ml-[4.5rem] xl:ml-[10.9rem] italic'>{errors.password?.message}</p>
+            <p className='text-[0.7rem] font-sans font-bold text-reddish text-right w-[15rem] md:ml-[4.5rem] xl:ml-[10.9rem] italic'>{errors.password?.message}</p>
             <input
               type='submit'
               className='cursor-pointer font-poppins bg-greenish text-white w-full py-3 md:py-4 text-sm mt-2 md:mt-4 rounded-md'
