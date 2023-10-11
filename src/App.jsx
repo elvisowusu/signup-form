@@ -79,7 +79,7 @@ function App() {
               className=' flex flex-col justify-center items-center '
             >
             <input
-              className={`border ${errors.firstName? 'border-reddish':''} focus:outline-none focus:border-blue placeholder:text-black placeholder:font-bold px-[1rem] lg:px-[1.5rem] xl:px-[1.7rem] py-[0.6rem] lg:py-[0.9rem] border-y-2 border-x-2 w-full rounded-md`}
+              className={`border ${errors.firstName? 'border-reddish':''} focus:outline-none focus:border-blue placeholder:font-bold px-[1rem] lg:px-[1.5rem] xl:px-[1.7rem] py-[0.6rem] lg:py-[0.9rem] border-y-2 border-x-2 w-full rounded-md`}
               placeholder={errors.firstName?"":"First Name"} 
               type="text" 
               {...register("firstName")}
@@ -87,7 +87,7 @@ function App() {
             {errors.firstName? <BiSolidErrorCircle className='absolute right-8 xl:right-[3.4rem] bottom-[22.8rem] md:bottom-[24.6rem] lg:bottom-[26.9rem] h-5 md:h-6 w-5 md:w-6 text-reddish' />:""}
             <p className='text-[0.7rem] font-sans font-bold text-reddish ml-[6rem] sm:ml-[5.5rem] md:ml-[10rem] lg:ml-[12.6rem] xl:ml-[16.7rem] italic' >{errors.firstName?.message}</p>
             <input 
-              className={`border ${errors.lastName? 'border-reddish':''} focus:outline-none focus:border-blue placeholder:text-black placeholder:font-bold px-[1rem] lg:px-[1.5rem] xl:px-[1.7rem] py-[0.6rem] lg:py-[0.9rem] border-y-2 border-x-2 w-full mt-3 md:mt-4 rounded-md`}
+              className={`border ${errors.lastName? 'border-reddish':''} focus:outline-none focus:border-blue placeholder:font-bold px-[1rem] lg:px-[1.5rem] xl:px-[1.7rem] py-[0.6rem] lg:py-[0.9rem] border-y-2 border-x-2 w-full mt-3 md:mt-4 rounded-md`}
               placeholder={errors.lastName?"":"Last Name"}
               type="text"
               {...register("lastName")}
@@ -95,7 +95,7 @@ function App() {
             {errors.lastName? <BiSolidErrorCircle className='absolute right-8 xl:right-[3.4rem] bottom-[18.1rem] md:bottom-[19.65rem] lg:bottom-[21.4rem] h-5 md:h-6 w-5 md:w-6 text-reddish' />:""}
             <p className='text-[0.7rem] font-sans font-bold text-reddish ml-[6rem] sm:ml-[5.5rem] md:ml-[10rem] lg:ml-[12.6rem] xl:ml-[16.7rem] italic'>{errors.lastName?.message}</p>
             <input 
-              className={`border focus:outline-none focus:border-blue ${errors.email?' placeholder-red-600 font-poppins text-sm md:text-lg border-reddish' :'placeholder:text-black'}  placeholder:font-bold inputs px-[1rem] lg:px-[1.5rem] xl:px-[1.7rem] py-[0.6rem] lg:py-[0.9rem] border-y-2 border-x-2 w-full mt-3 md:mt-4 rounded-md`}
+              className={`border focus:outline-none focus:border-blue ${errors.email?' placeholder-red-600 font-poppins text-sm md:text-lg border-reddish' :''}  placeholder:font-bold inputs px-[1rem] lg:px-[1.5rem] xl:px-[1.7rem] py-[0.6rem] lg:py-[0.9rem] border-y-2 border-x-2 w-full mt-3 md:mt-4 rounded-md`}
               placeholder={errors.email? "email@example/com": "Email Address"} 
               type="email"
               {...register("email")}
@@ -103,7 +103,7 @@ function App() {
             {errors.email? <BiSolidErrorCircle className='absolute right-8 xl:right-[3.4rem] bottom-[13.5rem] md:bottom-[14.7rem] lg:bottom-[15.7rem] h-5 md:h-6 w-5 md:w-6 text-reddish' />:""}
             <p className='text-[0.7rem] font-sans font-bold text-reddish ml-[5.5rem] sm:ml-[5rem] md:ml-[9.4rem] lg:ml-[12.1rem] xl:ml-[16rem] italic'>{errors.email?.message}</p>
             <input 
-              className={`border ${errors.password? 'border-reddish':''} focus:outline-none focus:border-blue placeholder:text-black placeholder:font-bold px-[1rem] lg:px-[1.5rem] xl:px-[1.7rem] py-[0.6rem] lg:py-[0.9rem]  border-y-2 border-x-2 w-full mt-3 md:mt-4 rounded-md`}
+              className={`border ${errors.password? 'border-reddish':''} focus:outline-none focus:border-blue placeholder:font-bold px-[1rem] lg:px-[1.5rem] xl:px-[1.7rem] py-[0.6rem] lg:py-[0.9rem]  border-y-2 border-x-2 w-full mt-3 md:mt-4 rounded-md`}
               placeholder={errors.password?"":"Password"}
               type="password"
               {...register("password")}
