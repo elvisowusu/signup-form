@@ -2,6 +2,7 @@ import { useState,useEffect } from 'react'
 import {useForm} from "react-hook-form"
 import {yupResolver} from '@hookform/resolvers/yup'
 import * as yup from 'yup'
+import {BiSolidErrorCircle} from 'react-icons/bi'
 import './App.css'
 
 function App() {
@@ -14,11 +15,11 @@ function App() {
     lastName: yup
         .string()
         .required("Last Name cannot be empty"),
-        email: yup
+    email: yup
         .string()
         .email()
         .required("Looks like this is not an email"),
-        // fornumbers: yup
+  //fornumbers: yup
         //     .number()
         //     .positive()
         //     .integer()
@@ -28,12 +29,12 @@ function App() {
     password: yup
         .string()
         .required("Password cannot be empty")
-        .min(6)
-        .max(15),
-        // confirmPassword: yup
-        //     .string()
-        //     .oneOf([yup.ref("password"),null])
-    //     .required(),
+        .min(6,"password should exceed 6 characters")
+        .max(15,"password shouldn't exceed 15 characters"),
+  //confirmPassword: yup
+        // .string()
+        //.oneOf([yup.ref("password"),null],"Passwords don't match")
+        //.required(),
   })
   
   const {register, handleSubmit, formState:{errors}} =useForm({
@@ -69,10 +70,10 @@ function App() {
           <p className='opacity-80 ml-2'>See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how developers think is invaluable.</p>
         </div>
         <div className="flex flex-col justify-center items-center px-4 h-[27rem] -mt-2 md:-mt-6 ">
-          <div className='bg-blue text-center text-white px-[3rem] py-3 xl:py-5 w-[17.3rem] mb-6 text-sm rounded-md md:w-[22rem] md:text-[1rem]  lg:w-[25rem] xl:w-[31rem]'>
+          <div className='bg-blue text-center text-white px-[3rem] py-3 xl:py-5 w-[17.3rem] mb-6 text-sm rounded-md md:w-[22rem] md:text-[1rem]  lg:w-[25rem] xl:w-[31rem] shadow-md shadow-gray-700 drop-shadow-sm'>
             Try it free 7 days <span className='text-grayishBlue'>then $20/mo. thereafter</span>
           </div>
-          <div className='bg-white py-5 xl:py-9 w-[17.3rem] px-4 xl:px-9 rounded-lg md:w-[22rem] lg:w-[25rem] xl:w-[31rem]'>
+          <div className='bg-white py-5 xl:py-9 w-[17.3rem] px-4 xl:px-9 rounded-lg md:w-[22rem] lg:w-[25rem] xl:w-[31rem] shadow-md shadow-gray-600 drop-shadow-2xl'>
           <form 
               onSubmit={handleSubmit(onSubmit)}
               className='font-sans flex flex-col justify-center items-center '
@@ -83,28 +84,32 @@ function App() {
               type="text" 
               {...register("firstName")}
             />
-            <p className='text-[0.7rem] font-bold text-reddish ml-[6rem] sm:ml-[5.5rem] md:ml-[10rem] lg:ml-[12.6rem] italic' >{errors.firstName?.message}</p>
+            {errors.firstName? <BiSolidErrorCircle className='absolute right-8 xl:right-[3.4rem] bottom-[23rem] md:bottom-[24.6rem] lg:bottom-[26.6rem] h-5 md:h-6 w-5 md:w-6 text-reddish' />:""}
+            <p className='text-[0.7rem] font-bold text-reddish ml-[6rem] sm:ml-[5.5rem] md:ml-[10rem] lg:ml-[12.6rem] xl:ml-[16.7rem] italic' >{errors.firstName?.message}</p>
             <input 
               className='border focus:outline-none focus:border-blue placeholder:text-black placeholder:font-bold px-[1rem] lg:px-[1.5rem] xl:px-[1.7rem] py-[0.6rem] lg:py-[0.9rem] border-y-2 border-x-2 w-full mt-3 md:mt-4 rounded-md'
               placeholder="Last Name"
               type="text"
               {...register("lastName")}
             />
-            <p className='text-[0.7rem] font-bold text-reddish ml-[6rem] sm:ml-[5.5rem] md:ml-[10rem] lg:ml-[12.6rem] italic'>{errors.lastName?.message}</p>
+            {errors.lastName? <BiSolidErrorCircle className='absolute right-8 xl:right-[3.4rem] bottom-[18.3rem] md:bottom-[19.65rem] lg:bottom-[21.2rem] h-5 md:h-6 w-5 md:w-6 text-reddish' />:""}
+            <p className='text-[0.7rem] font-bold text-reddish ml-[6rem] sm:ml-[5.5rem] md:ml-[10rem] lg:ml-[12.6rem] xl:ml-[16.7rem] italic'>{errors.lastName?.message}</p>
             <input 
               className='border focus:outline-none focus:border-blue placeholder:text-black placeholder:font-bold inputs px-[1rem] lg:px-[1.5rem] xl:px-[1.7rem] py-[0.6rem] lg:py-[0.9rem] border-y-2 border-x-2 w-full mt-3 md:mt-4 rounded-md'
-              placeholder="Email Address" 
+              placeholder={errors.email? "email@example/com": "Email Address"} 
               type="email"
               {...register("email")}
             />
-            <p className='text-[0.7rem] font-bold text-reddish ml-[5.5rem] sm:ml-[5rem] md:ml-[9.4rem] lg:ml-[12.1rem] italic'>{errors.email?.message}</p>
+            {errors.email? <BiSolidErrorCircle className='absolute right-8 xl:right-[3.4rem] bottom-[13.6rem] md:bottom-[14.7rem] lg:bottom-[15.6rem] h-5 md:h-6 w-5 md:w-6 text-reddish' />:""}
+            <p className='text-[0.7rem] font-bold text-reddish ml-[5.5rem] sm:ml-[5rem] md:ml-[9.4rem] lg:ml-[12.1rem] xl:ml-[16rem] italic'>{errors.email?.message}</p>
             <input 
               className='border focus:outline-none focus:border-blue placeholder:text-black placeholder:font-bold px-[1rem] lg:px-[1.5rem] xl:px-[1.7rem] py-[0.6rem] lg:py-[0.9rem]  border-y-2 border-x-2 w-full mt-3 md:mt-4 rounded-md'
               placeholder="Password"
               type="password"
               {...register("password")}
             />
-            <p className='text-[0.7rem] font-bold text-reddish ml-[6.5rem] sm:ml-[5.5rem] md:ml-[10.4rem] lg:ml-[13rem] italic'>{errors.password?.message}</p>
+             {errors.password? <BiSolidErrorCircle className='absolute right-8 xl:right-[3.4rem] bottom-[9rem] md:bottom-[9.8rem] lg:bottom-[10rem] h-5 md:h-6 w-5 md:w-6 text-reddish' />:""}
+            <p className='text-[0.7rem] font-bold text-reddish text-right w-[15rem] md:ml-[4.5rem] xl:ml-[10.9rem] italic'>{errors.password?.message}</p>
             <input
               type='submit'
               className='cursor-pointer font-poppins bg-greenish text-white w-full py-3 md:py-4 text-sm mt-2 md:mt-4 rounded-md'
