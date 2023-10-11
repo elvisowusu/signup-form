@@ -64,7 +64,7 @@ function App() {
   }, []); // Empty dependency array ensures that the effect runs once when the component mounts
 
   return (
-    <div className={`font-poppins flex flex-col justify-center items-center  h-[121vh] ${screenWidth <= 640? "bg-[url(./assets/bg-intro-mobile.png)]":"bg-[url(./assets/bg-intro-desktop.png)]"} bg-red-300 bg-cover overflow-cover sm:h-[100vh] sm:flex-row md:gap-[4rem]`}>
+    <div className={`font-poppins flex flex-col justify-center items-center  h-[121vh] ${screenWidth <= 640? "bg-[url(./assets/bg-intro-mobile.png)]":"bg-[url(./assets/bg-intro-desktop.png)]"} bg-reddish bg-cover overflow-cover sm:h-[100vh] sm:flex-row md:gap-[4rem]`}>
         <div className='text-white w-[17.6rem] sm:w-[18rem] md:w-[20rem] lg:w-[25rem] xl:w-[33rem] text-sm text-center mb-[3.5rem] mt-[2.4rem] sm:text-left md:text-[1rem] md:leading-6'>
           <h1 className='text-[1.5rem] px-2 mb-[1.2rem] leading-[2rem] md:leading-[2.2rem] lg:leading-[2.4rem] xl:leading-[3rem] sm:text-[1.7rem] md:text-[1.9rem] lg:text-[2.1rem] xl:text-[3.1rem] xl:mb-6'>Learn to code by watching others</h1>
           <p className='opacity-80 ml-2'>See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how developers think is invaluable.</p>
