@@ -80,7 +80,7 @@ function App() {
             >
             <input
               className={`border ${errors.firstName? 'border-reddish':''} focus:outline-none focus:border-blue placeholder:text-black placeholder:font-bold px-[1rem] lg:px-[1.5rem] xl:px-[1.7rem] py-[0.6rem] lg:py-[0.9rem] border-y-2 border-x-2 w-full rounded-md`}
-              placeholder="First Name" 
+              placeholder={errors.firstName?"":"First Name"} 
               type="text" 
               {...register("firstName")}
             />
@@ -88,7 +88,7 @@ function App() {
             <p className='text-[0.7rem] font-bold text-reddish ml-[6rem] sm:ml-[5.5rem] md:ml-[10rem] lg:ml-[12.6rem] xl:ml-[16.7rem] italic' >{errors.firstName?.message}</p>
             <input 
               className={`border ${errors.lastName? 'border-reddish':''} focus:outline-none focus:border-blue placeholder:text-black placeholder:font-bold px-[1rem] lg:px-[1.5rem] xl:px-[1.7rem] py-[0.6rem] lg:py-[0.9rem] border-y-2 border-x-2 w-full mt-3 md:mt-4 rounded-md`}
-              placeholder="Last Name"
+              placeholder={errors.lastName?"":"Last Name"}
               type="text"
               {...register("lastName")}
             />
@@ -104,7 +104,7 @@ function App() {
             <p className='text-[0.7rem] font-bold text-reddish ml-[5.5rem] sm:ml-[5rem] md:ml-[9.4rem] lg:ml-[12.1rem] xl:ml-[16rem] italic'>{errors.email?.message}</p>
             <input 
               className={`border ${errors.password? 'border-reddish':''} focus:outline-none focus:border-blue placeholder:text-black placeholder:font-bold px-[1rem] lg:px-[1.5rem] xl:px-[1.7rem] py-[0.6rem] lg:py-[0.9rem]  border-y-2 border-x-2 w-full mt-3 md:mt-4 rounded-md`}
-              placeholder="Password"
+              placeholder={errors.password?"":"Password"}
               type="password"
               {...register("password")}
             />
